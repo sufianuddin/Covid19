@@ -1,0 +1,17 @@
+Date = Mon 08/02/2021 and Time = 12:40:50.96  
+1) Python Script Started 
+2) Headless Chrome Initialized
+3) Data to Google Sheets Initialized
+
+
+      Province Confirmed Cases Active Cases  Deaths Recoveries
+0          AJK          24,891        3,158     628     21,105
+1  Balochistan          30,502        1,199     328     28,975
+2           GB           8,212          813     147      7,252
+3    Islamabad          88,093        3,847     803     83,443
+4          KPK         144,848        4,110   4,468    136,270
+5       Punjab         357,735       13,470  11,067    333,198
+6        Sindh         385,414       46,616   6,021    332,777
+
+
+Time Taken to Complete this Job: 00:00:30

@@ -13,14 +13,14 @@ import time
 start_time = time.time()
 
 options = Options()
-options.headless = True
+# options.headless = True
 options.add_argument("disable-gpu")
 options.add_argument("--disable-extensions")
 options.add_argument('--disable-logging')
 options.add_argument("log-level=3")
 
 driver = webdriver.Chrome('chromedriver.exe', options=options)   #Google Chrome Version 92.0.4515.107
-print ("Headless Chrome Initialized")
+print ("2) Headless Chrome Initialized")
 driver.set_window_position(975, 5)
 driver.get('https://datastudio.google.com/embed/reporting/1PLVi5amcc_R5Gh928gTE8-8r8-fLXJQF/page/R24IB')
 
@@ -59,16 +59,19 @@ try:
     
     result_1transposed = result_1.T
     finalData = result_1transposed.rename(columns={0: "Province", 1: "Confirmed Cases", 2: "Active Cases", 3: "Deaths", 4: "Recoveries"}).reset_index(drop=True)
-    print(finalData)
     
     products_list = [finalData.columns.values.tolist()] + finalData.values.tolist()
     
-    print ("Data to Google Sheets Initialized")
+    print ("3) Data to Google Sheets Initialized")
     gc = gs.service_account(filename='keys.json')   #Google credentials from google service
-    sh = gc.open("countryProvince")   #Goole sheet file name
+    sh = gc.open("countryProvince")   #Google sheet file name
     worksheet = sh.worksheet("Sheet1")   #Sheet tab name
     req=worksheet.update('A1', products_list)   #Send data to google spread sheet
     
+    print("\n")
+    print(finalData)
+    
+    print("\n")
     seconds = time.time() - start_time
     print('Time Taken to Complete this Job:', time.strftime("%H:%M:%S",time.gmtime(seconds)))
     
