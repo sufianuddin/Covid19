@@ -9,3 +9,8 @@ Scraper for Pakistan provinces Covid19 status.
 * [Pandas](https://pandas.pydata.org/)
 * [gspread](https://docs.gspread.org/en/latest/)
 * [Time](https://docs.python.org/3/)
+
+## Files
+* [GetDataProvinces.py](https://github.com/sufianuddin/Covid19/blob/main/GetDataProvinces.py)
+* [GetProvinceDataJob.bat](https://github.com/sufianuddin/Covid19/blob/main/GetProvinceDataJob.bat)
+* [DataImage.PNG](https://github.com/sufianuddin/Covid19/blob/main/DataImage.PNG)
